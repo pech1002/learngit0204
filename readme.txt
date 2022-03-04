@@ -10,3 +10,4 @@ Creating a new branch is quick and simple.
 Git add merge.
 Git cherry-up works well.
 New features.
+User1 add new features.
