@@ -6,3 +6,4 @@ Git is a very useful tool.
 Pls explore more.
 Git pull test.
 Creating a new branch is quick.
+Creating a new branch is quick & simple.
