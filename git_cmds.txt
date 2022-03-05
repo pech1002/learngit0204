@@ -1,0 +1,60 @@
+####
+Basic git skills
+####
+# Create a repo on PC, and set it that git can manange.
+1. git init 
+# add file to repo, stage stage
+2. add filename1 filename2 ....
+# submmit file to repo, current branch
+3. git commit -m "notification"
+# View history log
+4. git log or git log --pretty=oneline
+# reback to history
+5. git reset --hard HEAD^ /HEAD ^^ /HEAD~100
+# reback to the specified version
+6. git reset --hard commit-id
+# reback to future 
+7. git relog
+# View status
+8. git status
+# diff file in worksapce and repo
+9. git diff HEAD -- filenam1
+# Cancle modification and reback to last version on workspace
+10. git checkout -- readme.txt
+# Cancle modification and reback to last version on stage
+11. git reset HEAD filenam1  
+    git checkout -- readme.txt
+# remove file
+12. git rm filename 
+    git commit -m "XXX"
+# submmit repo to remote
+13. git push 
+# view remote repo address
+14. git remote -v
+# Connect a remote repo
+15. git remote add origin git@server-name:path/repo-name.git
+# clone from remote repo
+16. git clone remote_repo_address
+# view, Create, switch,Create and switch, merge to current branch and delete branch
+17. git branch
+    git branch branch_name
+    git checkout branch_name or git switch branch_name
+    git checkout -b branch_name or git switch -c branch_name
+    git merge branch_name or git merge --no-ff -m "merge with no-ff" branch_name
+    git branch -d branch_name
+    # delete branch before merging
+    git branch -D branch_name
+# View branch graph log
+18. git log --graph
+# Bug branch while working on worksapce
+19. git stash # restore working first
+    git switch main 
+    git switch -c issue-0
+    git add
+    git commit -m "XXXX"
+    git switch main
+    git branch -d issue-0
+# Fix bug on branch_name and then continue working on branch_name
+20. git siwtch branch_name
+    git cherry-pick bug_commit_id
+    git stash pop # cancle stash to reback workspace
