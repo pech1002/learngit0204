@@ -1,5 +1,5 @@
 ####
-Basic git skills
+Basic git skills.
 ####
 # Create a repo on PC, and set it that git can manange.
 1. git init 
