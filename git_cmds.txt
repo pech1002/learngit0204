@@ -58,6 +58,12 @@ Basic git skills.
 20. git siwtch branch_name
     git cherry-pick bug_commit_id
     git stash pop # cancle stash to reback workspace
-21. Collegue develops on branch_name
+21. Colleague develops on branch_name
     git checkout -b branch_name origin/branch_name
     git push origin branch_name
+22. main repo update while branch repo no update
+    git switch dev
+    git stash
+    git merge --no--off -m "merge main to dev branch" main
+    git stash pop
+    
