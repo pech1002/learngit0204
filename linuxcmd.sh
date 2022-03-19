@@ -86,6 +86,10 @@
 29 zip or unzip
 # add an account or remove an account 
 30. useradd username  passwd password or userdel username
+# Search file according to file content
+31. grep 'energywise'* # current directory
+    grep -r 'energywise'* # current directory and sub-directory
+    grep -l -r 'energywise'* # not siplay content line
 
 
 
