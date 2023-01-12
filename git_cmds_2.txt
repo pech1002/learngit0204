@@ -1,0 +1,97 @@
+Git Alias:
+%Open global configuration
+	git config --global --edit
+% Review git alias infos
+	git config --global --list
+% Add git alias
+	git config --global alias.cfgl "config --global --list"
+	git config --global alias.lg log
+	git config --global alias.st status
+	git config --global alias.cm "commit -m"
+	git config --global alias.cam "commit -am"
+	git config --global alias.cam "commit -a -m"
+	git config --global alias.br branch
+	git config --global alias.co checkout
+	
+	
+% Delete git alias
+	git config --global --unset alias.st
+	
+Configure and review user infos
+	git config --global user.name <xxx>
+	git config --global user.email <xxx>
+	git config user.name
+	git config user.email
+
+Create Repos and initialize git repo:
+	mkdir <repo.name>
+	cd <repo.name>
+	pwd
+	git init
+
+Create file and add, commit:
+	touch <filename>         :workspace
+	git add <filename>             :stage
+	git reset <filename>           : cancel "git add", file back to worspace 
+	git commit -m "message" :branch
+	git commit -a -m "message" --amend: Modify latest commit 
+	git reset --soft HEAD^: Revoke commit--
+	
+Shuttle Version:
+	git status: review current status
+	git diff: Review difference
+	git diff: workspace vs stage
+	git diff --cached: stage vs repo
+	git diff HEAD: workspace vs repo
+	git log: Review commit history
+	git log -1: Review latest version
+	git log -x: review latest x verison
+	git log --pretty=oneline
+	
+	git reset --hard HEAD
+	git reset --hard HEAD^
+	git reset --hard HEAD~2
+	git reset --hard <Version #>
+	git reflog
+	git diff HEAD -- <file name> : diff workspace with stage
+
+Discard Modification:
+	git restore <filename>
+	git checkout -- <filename>
+	
+Delete file from repo
+	git rm filename
+	git commit -m "message"
+
+Remote Repos
+	git push -u origin master
+	git push origin master
+	git remote -v 
+	git pull
+	git fetch
+
+Branch
+	git branch
+	git checkout -b <branch name> or git switch -c <branch name>
+	git branch <branch name>、b
+	git checkout <branch name> or git switch <branch name>
+	git checkout <branch name> or git switch <branch name>
+	git merge <branch name> : merger <branch name> to current branch
+	git branch -d <branch name>
+	git branch -D <branch name>
+	git log --graph --pretty=oneline --abbrev-commit ： view branch merge graph
+
+	git merge --no-ff -m "merge with no-ff" <branch name> : Fast forward forbbiden.
+	
+Remote Branch:
+	git push origin <branch name>:<remote branch name>
+	git push origin --delete <remote branch name>
+	
+	git checkout -b <branch name> origin/<branch name>: git checkout -b dev1 origin/dev1
+	
+Bug
+	git stash
+	git stash pop
+	git stash list
+        git cherry-pick <commit id>
+
