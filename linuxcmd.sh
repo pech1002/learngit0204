@@ -38,6 +38,17 @@
 8. rmdir
     rm -r 
     rm -rf
+    rm -d	 Remove an empty directory using the rm command.
+    rm -r	Remove a non-empty directory and its content.
+    rm -f	Ignore any prompt when deleting a write-protected file.
+    rm -rf	Ignore any prompt when deleting a write-protected non-empty folder.
+    rm -i	Output a prompt before deleting every file.
+    rm -I	Output a prompt only once before deleting more than three files.
+    rm *	Wildcard that represents multiple characters.
+    rm ?	Wildcard that represents a single character.
+    rmdir -p	Remove an empty subdirectory and its parent directory.
+    rmdir -v	Print the information that the specified directory was deleted.
+
 # creat a blank new file
 9. touch
 # locate a file or using the -i argument along with this command will make it case-insensitive, 
